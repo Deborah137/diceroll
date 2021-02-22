@@ -11,15 +11,23 @@ function Dice(props) {
 }
 
 function App() {
-  const [roll, setRoll] = useState();
+  const [roll, setRoll] = useState(1);
   return (
     <div>
       <Dice roll={roll} />
-      <Button buttonText="Roll Away!!!" />
+      <Button buttonText="Roll Away!!!" handleClick={() => handleClick()} />
     </div>
   );
 
-  function handleClick() {}
+  function handleClick() {
+    //  $(".button").click(generateRandomNumber))
+    //  const [
+    //    setRoll
+    //  ] = useState('generateRandomNumber')
+
+    let randomnumber = generateRandomNumber();
+    setRoll(randomnumber);
+  }
 }
 
 function generateRandomNumber() {
